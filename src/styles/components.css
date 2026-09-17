@@ -1,0 +1,208 @@
+/* Shared Components Styling */
+
+/* Floating Demo Simulation Bar */
+.demo-simulation-bar {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background-color: var(--gov-slate-900);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.8rem;
+  max-width: 95vw;
+  flex-wrap: wrap;
+}
+
+.demo-chip {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  font-size: 0.76rem;
+}
+
+.demo-chip:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.demo-chip.active {
+  background-color: var(--gov-ochre-600);
+  color: #ffffff;
+}
+
+/* Global Portal Switcher Header */
+.global-portal-bar {
+  background-color: var(--gov-slate-950);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  border-bottom: 1px solid var(--gov-slate-800);
+}
+
+.global-portal-bar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-switcher-pill-group {
+  display: inline-flex;
+  background-color: var(--gov-slate-900);
+  padding: 2px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gov-slate-800);
+}
+
+.role-pill-btn {
+  background: none;
+  border: none;
+  color: var(--gov-slate-400);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.role-pill-btn.active {
+  background-color: var(--gov-green-700);
+  color: #ffffff;
+}
+
+.role-pill-btn:hover:not(.active) {
+  color: #ffffff;
+}
+
+/* Tab Component */
+.gov-tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1.5px solid var(--gov-border);
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.gov-tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gov-tab-btn {
+  background: none;
+  border: none;
+  padding: 0.65rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gov-slate-600);
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gov-tab-btn:hover {
+  color: var(--gov-slate-900);
+}
+
+.gov-tab-btn.active {
+  color: var(--gov-green-700);
+  font-weight: 700;
+}
+
+.gov-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background-color: var(--gov-green-700);
+  border-radius: 2px 2px 0 0;
+}
+
+/* Empty State */
+.gov-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--gov-surface);
+  border: 1px dashed var(--gov-border-strong);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.gov-empty-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--gov-slate-100);
+  color: var(--gov-slate-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Loading State Spinner */
+.gov-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(21, 128, 61, 0.2);
+  border-top-color: var(--gov-green-700);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* GovTech Official Header Branding */
+.gov-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gov-emblem-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: var(--gov-green-800);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 6px rgba(20, 83, 45, 0.3);
+}
